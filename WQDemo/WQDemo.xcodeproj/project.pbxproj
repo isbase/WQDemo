@@ -15,13 +15,14 @@
 		D720F561196549150097F0DA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D720F560196549150097F0DA /* AppDelegate.m */; };
 		D720F564196549150097F0DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D720F562196549150097F0DA /* Main.storyboard */; };
 		D720F567196549150097F0DA /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D720F566196549150097F0DA /* MasterViewController.m */; };
-		D720F56A196549150097F0DA /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D720F569196549150097F0DA /* DetailViewController.m */; };
 		D720F56C196549150097F0DA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D720F56B196549150097F0DA /* Images.xcassets */; };
 		D720F573196549150097F0DA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D720F572196549150097F0DA /* XCTest.framework */; };
 		D720F574196549150097F0DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D720F550196549150097F0DA /* Foundation.framework */; };
 		D720F575196549150097F0DA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D720F554196549150097F0DA /* UIKit.framework */; };
 		D720F57D196549150097F0DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D720F57B196549150097F0DA /* InfoPlist.strings */; };
 		D720F57F196549150097F0DA /* WQDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D720F57E196549150097F0DA /* WQDemoTests.m */; };
+		D720F590196552570097F0DA /* ScreenShotController.m in Sources */ = {isa = PBXBuildFile; fileRef = D720F58F196552570097F0DA /* ScreenShotController.m */; };
+		D720F593196553380097F0DA /* duola.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D720F592196553380097F0DA /* duola.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,14 +49,15 @@
 		D720F563196549150097F0DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D720F565196549150097F0DA /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		D720F566196549150097F0DA /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		D720F568196549150097F0DA /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		D720F569196549150097F0DA /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		D720F56B196549150097F0DA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D720F571196549150097F0DA /* WQDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WQDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D720F572196549150097F0DA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		D720F57A196549150097F0DA /* WQDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WQDemoTests-Info.plist"; sourceTree = "<group>"; };
 		D720F57C196549150097F0DA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D720F57E196549150097F0DA /* WQDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WQDemoTests.m; sourceTree = "<group>"; };
+		D720F58E196552570097F0DA /* ScreenShotController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreenShotController.h; sourceTree = "<group>"; };
+		D720F58F196552570097F0DA /* ScreenShotController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScreenShotController.m; sourceTree = "<group>"; };
+		D720F592196553380097F0DA /* duola.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = duola.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,13 +117,14 @@
 		D720F556196549150097F0DA /* WQDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D720F58C19654C340097F0DA /* Resources */,
+				D720F58B19654C2B0097F0DA /* Vendors */,
+				D720F58A19654C220097F0DA /* General */,
+				D720F58919654C1A0097F0DA /* Macro */,
+				D720F58819654C0E0097F0DA /* Models */,
+				D720F58D19654C5C0097F0DA /* Sections */,
 				D720F55F196549150097F0DA /* AppDelegate.h */,
 				D720F560196549150097F0DA /* AppDelegate.m */,
-				D720F562196549150097F0DA /* Main.storyboard */,
-				D720F565196549150097F0DA /* MasterViewController.h */,
-				D720F566196549150097F0DA /* MasterViewController.m */,
-				D720F568196549150097F0DA /* DetailViewController.h */,
-				D720F569196549150097F0DA /* DetailViewController.m */,
 				D720F56B196549150097F0DA /* Images.xcassets */,
 				D720F557196549150097F0DA /* Supporting Files */,
 			);
@@ -155,6 +158,62 @@
 				D720F57B196549150097F0DA /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D720F58819654C0E0097F0DA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		D720F58919654C1A0097F0DA /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Macro;
+			sourceTree = "<group>";
+		};
+		D720F58A19654C220097F0DA /* General */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = General;
+			sourceTree = "<group>";
+		};
+		D720F58B19654C2B0097F0DA /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Vendors;
+			sourceTree = "<group>";
+		};
+		D720F58C19654C340097F0DA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D720F591196552F40097F0DA /* images */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D720F58D19654C5C0097F0DA /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				D720F562196549150097F0DA /* Main.storyboard */,
+				D720F565196549150097F0DA /* MasterViewController.h */,
+				D720F566196549150097F0DA /* MasterViewController.m */,
+				D720F58E196552570097F0DA /* ScreenShotController.h */,
+				D720F58F196552570097F0DA /* ScreenShotController.m */,
+			);
+			name = Sections;
+			sourceTree = "<group>";
+		};
+		D720F591196552F40097F0DA /* images */ = {
+			isa = PBXGroup;
+			children = (
+				D720F592196553380097F0DA /* duola.jpg */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +294,7 @@
 			files = (
 				D720F56C196549150097F0DA /* Images.xcassets in Resources */,
 				D720F55B196549150097F0DA /* InfoPlist.strings in Resources */,
+				D720F593196553380097F0DA /* duola.jpg in Resources */,
 				D720F564196549150097F0DA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,7 +317,7 @@
 				D720F561196549150097F0DA /* AppDelegate.m in Sources */,
 				D720F567196549150097F0DA /* MasterViewController.m in Sources */,
 				D720F55D196549150097F0DA /* main.m in Sources */,
-				D720F56A196549150097F0DA /* DetailViewController.m in Sources */,
+				D720F590196552570097F0DA /* ScreenShotController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

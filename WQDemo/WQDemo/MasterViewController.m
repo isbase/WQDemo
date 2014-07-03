@@ -7,8 +7,7 @@
 //
 
 #import "MasterViewController.h"
-
-#import "DetailViewController.h"
+#import "ScreenShotController.h"
 
 @interface MasterViewController () {
     NSArray *_objects;
@@ -57,13 +56,12 @@
     return cell;
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = _objects[indexPath.row];
-        [[segue destinationViewController] setDetailItem:object];
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row == 0) {
+        ScreenShotController *screenVC =[[ScreenShotController alloc] init];
+        [self.navigationController pushViewController:screenVC animated:YES];
     }
 }
+
 
 @end
