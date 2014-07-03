@@ -52,7 +52,7 @@
 
 -(void)onButtonClickw2222:(id)sender
 {
-    _showImageView.image = [self getImageFromView:self.view inRect:CGRectMake(200, 250, 100, 100)];
+    _showImageView.image = [self imageFromView:self.view atFrame:CGRectMake(100, 250, 200, 200)];
 }
 
 #pragma mark - 截图
@@ -63,38 +63,34 @@
     UIGraphicsEndImageContext(); return image;
 }
 
--(UIImage *)getImageFromView:(UIView *)orgView inRect:(CGRect)rect
+#pragma mark - 某个view指定区域
+- (UIImage *)imageFromView: (UIView *) theView   atFrame:(CGRect)r
 {
+    UIGraphicsBeginImageContext(theView.frame.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSaveGState(context);
+    UIRectClip(r);
+    [theView.layer renderInContext:context];
+    UIImage *theImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
     
-    CGContextRef ref = UIGraphicsGetCurrentContext()
-    UIGraphicsBeginImageContext(orgView.bounds.size);
-    [orgView.layer renderInContext:UIGraphicsGetCurrentContext()];
-    CGContextRef context=UIGraphicsGetCurrentContext();
-    UIGraphicsPushContext(context);
-    CGContextAddRect(context, rect);
-    CGContextClosePath(context);
-    
-    CGContextDrawPath(context, kCGPathFill);
-    CGContextFlush(context); // 强制执行上面定义的操作
-    UIImage* image =  UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsPopContext();
-    return image;
+    return  theImage;//[self getImageAreaFromImage:theImage atFrame:r];
 }
 
 
-/**
- UIGraphicsBeginImageContext(CGMakeSize(200,200));
- CGContextRefcontext=UIGraphicsGetCurrentContext();
- UIGraphicsPushContext(context);
- // ...把图写到context中，省略[indent]CGContextBeginPath();
- 
- 
- CGContextAddRect(CGMakeRect(0,0,100,100));
- CGContextClosePath();[/indent]CGContextDrawPath();
- CGContextFlush(); // 强制执行上面定义的操作
- UIImage* image = UIGraphicGetImageFromCurrentImageContext();
- UIGraphicsPopContext();
- */
+#pragma mark - test
+-(UIImage *)getImageFromView:(UIImage *)orgImage inRect:(CGRect)rect
+{
+    CGRect rc = CGRectMake(0, 0, orgImage.size.width, orgImage.size.height);
+    UIGraphicsBeginImageContext(rc.size);
+    CGContextRef ref = UIGraphicsGetCurrentContext();
+    CGContextClipToRect(ref, rect);
+    CGContextDrawImage(ref, rect, orgImage.CGImage);
+    UIImage *newImage =  UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
+}
+
 
 
 
